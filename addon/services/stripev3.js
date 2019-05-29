@@ -44,8 +44,15 @@ export default Service.extend({
     if (!didConfigure) {
       let publishableKey = this.get('publishableKey');
 
-      let { elements, createToken, createSource, retrieveSource, paymentRequest, createPaymentMethod } = new Stripe(publishableKey);
-      setProperties(this, { elements, createToken, createSource, retrieveSource, paymentRequest, createPaymentMethod });
+      let { 
+        elements, createToken, createSource, retrieveSource, paymentRequest, createPaymentMethod, 
+        handleCardPayment, handleCardAction 
+      } = new Stripe(publishableKey);
+      
+      setProperties(this, { 
+        elements, createToken, createSource, retrieveSource, paymentRequest, createPaymentMethod, 
+        handleCardPayment, handleCardAction  
+      });
 
       this.set('didConfigure', true);
     }
