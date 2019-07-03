@@ -46,7 +46,7 @@ export default Service.extend({
 
       let { 
         elements, createToken, createSource, retrieveSource, paymentRequest, createPaymentMethod, 
-        handleCardPayment, handleCardAction 
+        handleCardPayment, handleCardAction, handleCardSetup
       } = new Stripe(publishableKey);
       
       setProperties(this, { 
