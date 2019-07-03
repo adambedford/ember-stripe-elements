@@ -51,7 +51,7 @@ export default Service.extend({
       
       setProperties(this, { 
         elements, createToken, createSource, retrieveSource, paymentRequest, createPaymentMethod, 
-        handleCardPayment, handleCardAction  
+        handleCardPayment, handleCardAction, handleCardSetup
       });
 
       this.set('didConfigure', true);
